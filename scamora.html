@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Visszaszámláló</title>
+    <link rel=stylesheet href="scamora_style.css">
+    <script src="scamora_script.js"></script>
+</head>
+<body id="body">
+    <div id="csikhatter">
+        <div id="csik">&nbsp</div>
+    </div>
+    <div id="main">
+        <button id="resetgomb" onclick="reset()"><img src="redo-alt-solid.png"></button> 
+        <input id="idobe" type="number" placeholder="Adja meg az időt" value="">
+        <p >Hátrálévő idő:</p>
+        <p id="szamlalo">0:00</p>
+        <button id="startgomb" onclick="startstop()">Start</button>
+    </div>
+    
+    <div id="hatterdiv" onclick="reset()">
+        <div id="alljszoveg">
+            Lejárt az idő! <br><br><br><br>
+            <button id="divgomb" onclick="reset()">OK</button>
+        </div>
+    </div>
+</body>
+</html>
