@@ -20,6 +20,7 @@ function startstop() {
 var i = 1;
 var ido = 0;
 var to = 0;
+var csalas = true
 function szamlalo() {
     ido = idobe * 60 - i;
     document.getElementById("szamlalo").innerHTML = Math.floor(ido / 60) + ":" + ido % 60;
@@ -29,7 +30,11 @@ function szamlalo() {
         //itt megáll a számláló és fel ugrik egy ablak DE nem alert hanem div
         document.getElementById("hatterdiv").style.display = "block";
     } else {
-        to = setTimeout(szamlalo,1000);
+        if (csalas == false) {
+            to = setTimeout(szamlalo,1000);
+        } else {
+            to = setTimeout(szamlalo,1300);
+        }
     }
 }
 
